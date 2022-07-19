@@ -64,7 +64,7 @@ static NSMutableSet *leakedObjectPtrs;
 #if _INTERNAL_MLF_RC_ENABLED
     [MLeaksMessenger alertWithTitle:@"Memory Leak"
                             message:[NSString stringWithFormat:@"%@", proxy.viewStack]
-                           delegate:proxy
+                     tapButtonBlock:proxy.tabBlock
               additionalButtonTitle:@"Retain Cycle"];
 #else
     [MLeaksMessenger alertWithTitle:@"Memory Leak"

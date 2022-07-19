@@ -12,17 +12,15 @@
 
 #import "MLeaksMessenger.h"
 
-static __weak UIAlertView *alertView;
-
 @implementation MLeaksMessenger
 
 + (void)alertWithTitle:(NSString *)title message:(NSString *)message {
-    [self alertWithTitle:title message:message delegate:nil additionalButtonTitle:nil];
+    [self alertWithTitle:title message:message tapButtonBlock:nil additionalButtonTitle:nil];
 }
 
 + (void)alertWithTitle:(NSString *)title
                message:(NSString *)message
-              delegate:(id<UIAlertViewDelegate>)delegate
+        tapButtonBlock:(void(^)(void))block
  additionalButtonTitle:(NSString *)additionalButtonTitle {
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title
                                                                    message:message
@@ -31,6 +29,15 @@ static __weak UIAlertView *alertView;
     }];
     [alertVC addAction:conform];
 
+    if (additionalButtonTitle.length > 0) {
+        UIAlertAction *action2 = [UIAlertAction actionWithTitle:additionalButtonTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            if (block) {
+                block();
+            }
+        }];
+        [alertVC addAction:action2];
+    }
+    
     NSLog(@"%@: %@", title, message);
     [[self cms_currentWindow].rootViewController presentViewController:alertVC animated:YES completion:nil];
 }

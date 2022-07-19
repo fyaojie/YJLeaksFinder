@@ -4,7 +4,6 @@ platform :ios, '10.0'
 
 target 'YJLeaksFinder_Example' do
   pod 'YJLeaksFinder', :path => '../'
-
   target 'YJLeaksFinder_Tests' do
     inherit! :search_paths
   end

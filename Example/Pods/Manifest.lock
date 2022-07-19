@@ -1,5 +1,5 @@
 PODS:
-  - YJLeaksFinder (0.1.0)
+  - YJLeaksFinder (0.1.1)
 
 DEPENDENCIES:
   - YJLeaksFinder (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  YJLeaksFinder: e535decda9efed253f399ebd5144a55163b76a69
+  YJLeaksFinder: 5d725e5325bae7a7e0165e474570f0be79fb8eae
 
-PODFILE CHECKSUM: 1ab4d87b2b9b0a134596882808d001995df2da1a
+PODFILE CHECKSUM: c628cacebbdbe5b31f10d3a25536deb13f7552e5
 
 COCOAPODS: 1.11.2
