@@ -7,7 +7,5 @@ target 'YJLeaksFinder_Example' do
 
   target 'YJLeaksFinder_Tests' do
     inherit! :search_paths
-
-    pod 'FBSnapshotTestCase'
   end
 end
