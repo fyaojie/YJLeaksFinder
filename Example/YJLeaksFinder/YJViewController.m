@@ -7,7 +7,7 @@
 //
 
 #import "YJViewController.h"
-
+#import <YJLeaksFinder/MLeaksFinder.h>
 @interface YJViewController ()
 
 @end

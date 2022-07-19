@@ -38,24 +38,24 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-  s.library = 'c++'
-  
-  mrr_files = [
-     'YJLeaksFinder/Classes/FBRetainCycleDetector/Associations/FBAssociationManager.h',
-     'YJLeaksFinder/Classes/FBRetainCycleDetector/Associations/FBAssociationManager.mm',
-     'YJLeaksFinder/Classes/FBRetainCycleDetector/Layout/Blocks/FBBlockStrongLayout.h',
-     'YJLeaksFinder/Classes/FBRetainCycleDetector/Layout/Blocks/FBBlockStrongLayout.m',
-     'YJLeaksFinder/Classes/FBRetainCycleDetector/Layout/Blocks/FBBlockStrongRelationDetector.h',
-     'YJLeaksFinder/Classes/FBRetainCycleDetector/Layout/Blocks/FBBlockStrongRelationDetector.m',
-     'YJLeaksFinder/Classes/FBRetainCycleDetector/Layout/Classes/FBClassStrongLayoutHelpers.h',
-     'YJLeaksFinder/Classes/FBRetainCycleDetector/Layout/Classes/FBClassStrongLayoutHelpers.m',
-   ]
-
-   files = Pathname.glob("YJLeaksFinder/Classes/**/*")
-   files = files.map {|file| file.to_path}
-   files = files.reject {|file| mrr_files.include?(file)}
-
-   s.requires_arc = files.sort
-   s.framework = "Foundation", "CoreGraphics", "UIKit"
+  s.dependency 'FBRetainCycleDetector'
+#  s.library = 'c++'
+#
+#  mrr_files = [
+#     'YJLeaksFinder/Classes/FBRetainCycleDetector/Associations/FBAssociationManager.h',
+#     'YJLeaksFinder/Classes/FBRetainCycleDetector/Associations/FBAssociationManager.mm',
+#     'YJLeaksFinder/Classes/FBRetainCycleDetector/Layout/Blocks/FBBlockStrongLayout.h',
+#     'YJLeaksFinder/Classes/FBRetainCycleDetector/Layout/Blocks/FBBlockStrongLayout.m',
+#     'YJLeaksFinder/Classes/FBRetainCycleDetector/Layout/Blocks/FBBlockStrongRelationDetector.h',
+#     'YJLeaksFinder/Classes/FBRetainCycleDetector/Layout/Blocks/FBBlockStrongRelationDetector.m',
+#     'YJLeaksFinder/Classes/FBRetainCycleDetector/Layout/Classes/FBClassStrongLayoutHelpers.h',
+#     'YJLeaksFinder/Classes/FBRetainCycleDetector/Layout/Classes/FBClassStrongLayoutHelpers.m',
+#   ]
+#
+#   files = Pathname.glob("YJLeaksFinder/Classes/**/*")
+#   files = files.map {|file| file.to_path}
+#   files = files.reject {|file| mrr_files.include?(file)}
+#
+#   s.requires_arc = files.sort
+#   s.framework = "Foundation", "CoreGraphics", "UIKit"
 end
