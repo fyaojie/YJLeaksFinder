@@ -1,22 +1,22 @@
 PODS:
-  - FBRetainCycleDetector (0.1.4)
   - YJLeaksFinder (0.1.1):
-    - FBRetainCycleDetector
+    - YJRetainCycleDetector (= 0.1.5)
+  - YJRetainCycleDetector (0.1.5)
 
 DEPENDENCIES:
   - YJLeaksFinder (from `../`)
 
 SPEC REPOS:
   trunk:
-    - FBRetainCycleDetector
+    - YJRetainCycleDetector
 
 EXTERNAL SOURCES:
   YJLeaksFinder:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
-  YJLeaksFinder: 67e4f47e777d0c1570186662e22f00cd767ad467
+  YJLeaksFinder: 8f64b4fe5b35580b2e6e1ff4c90dfeb4c28a7c7e
+  YJRetainCycleDetector: 4a46a610bb621b942732e8bf45f7926110de541d
 
 PODFILE CHECKSUM: c628cacebbdbe5b31f10d3a25536deb13f7552e5
 
